@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package extensions.kafka.customizations.helloworld;
+package com.hivemq.extensions.kafka.customizations.helloworld;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 import com.hivemq.extension.sdk.api.packets.publish.PublishPacket;

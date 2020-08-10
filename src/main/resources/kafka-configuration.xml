@@ -16,7 +16,7 @@
             <mqtt-topic-filters>
                 <mqtt-topic-filter>transform/#</mqtt-topic-filter>
             </mqtt-topic-filters>
-            <transformer>extensions.kafka.customizations.helloworld.HelloWorldTransformer</transformer>
+            <transformer>com.hivemq.extensions.kafka.customizations.helloworld.HelloWorldTransformer</transformer>
         </mqtt-to-kafka-transformer>
     </mqtt-to-kafka-transformers>
 
