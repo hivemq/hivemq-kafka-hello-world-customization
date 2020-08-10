@@ -1,6 +1,5 @@
 plugins {
     id("java-library")
-    id("maven-publish")
     id("com.github.hierynomus.license")
     id("com.github.sgtsilvio.gradle.utf8")
     id("com.github.sgtsilvio.gradle.metadata")
