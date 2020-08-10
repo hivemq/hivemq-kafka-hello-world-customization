@@ -59,7 +59,6 @@ metadata {
 
 repositories {
     mavenCentral()
-    mavenLocal()
 }
 
 dependencies {
