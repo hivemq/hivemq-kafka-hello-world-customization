@@ -3,7 +3,7 @@
 :hivemq-blog-tools: http://www.hivemq.com/mqtt-toolbox
 :hivemq-support: https://community.hivemq.com/c/hivemq-extension-sdk/kafka-customization/14
 
-== HiveMQ Kafka Extension Hello World Customization
+= HiveMQ Kafka Extension Hello World Customization
 
 *Type*: Demonstration Customization
 
@@ -11,7 +11,7 @@
 
 *License*: Apache License Version 2.0
 
-=== Purpose
+== Purpose
 
 This Hello World customizations uses a Mqtt-to-Kafka transformer which forwards MQTT PUBLISHES to a Kafka cluster.
 It maps the MQTT topic structure to a matching Kafka topic structure and preserves MQTT 4 user properties as Kafka record headers.
@@ -19,7 +19,7 @@ It maps the MQTT topic structure to a matching Kafka topic structure and preserv
 We strongly recommend reading the {hivemq-kafka-docs-link}[HiveMQ Enterprise Extension for Kafka Documentation]
 to grasp the core concepts of HiveMQ Kafka customization development.
 
-=== Installation
+== Installation
 
 . Clone this repository into a Java 11 gradle project.
 . Run `./gradlew jar` task from gradle to build the customization.
@@ -28,26 +28,26 @@ to grasp the core concepts of HiveMQ Kafka customization development.
 . Delete the "HIVEMQ_HOME/extensions/hivemq-kafka-extension/DISABLED" file.
 . Start HiveMQ.
 
-=== First Steps
+== First Steps
 
-==== Manual Testing
+=== Manual Testing
 
 Connect with an {hivemq-blog-tools}[MQTT client] of your choice.
 Publish a MQTT message to the topic _transform/customization_.
 Monitor your Kafka cluster for a record from topic _transform.customization_.
 
-=== Next steps
+== Next steps
 
 Awesome, you got your first HiveMQ Kafka customization working.
 
 Now read the {hivemq-kafka-customization-docs-link}[HiveMQ Kafka Extension Customization Documentation] to see what customizations can do.
 
-=== Need help?
+== Need help?
 
 If you encounter any problems, we are happy to help.
 The best place to get in contact is our {hivemq-support}[cmmunity forum].
 
-= License
+== License
 
 HiveMQ Hello World Extension is licensed under the `APACHE LICENSE, VERSION 2.0`.
 A copy of the license can be found link:LICENSE[here].
