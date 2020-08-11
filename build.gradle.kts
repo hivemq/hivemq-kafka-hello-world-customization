@@ -71,6 +71,7 @@ dependencies {
     testImplementation("org.mockito:mockito-core:${property("mockito.version")}")
     testRuntimeOnly("org.mockito:mockito-junit-jupiter:${property("mockito.version")}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${property("junit.jupiter.version")}")
+    testRuntimeOnly("org.slf4j:slf4j-simple:${property("slf4j-simple.version")}")
 }
 
 tasks.test {
