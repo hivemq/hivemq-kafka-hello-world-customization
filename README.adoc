@@ -1,4 +1,5 @@
-:hivemq-extension-docs-link: https://www.hivemq.com/docs/kafka/latest/enterprise-extension-for-kafka/kafka.html#customization
+:hivemq-kafka-docs-link: https://www.hivemq.com/docs/kafka/latest/enterprise-extension-for-kafka/kafka.html
+:hivemq-kafka-customization-docs-link: https://www.hivemq.com/docs/kafka/latest/enterprise-extension-for-kafka/kafka.html#customization
 :hivemq-blog-tools: http://www.hivemq.com/mqtt-toolbox
 :hivemq-support: https://community.hivemq.com/c/hivemq-extension-sdk/kafka-customization/14
 
@@ -15,7 +16,7 @@
 This Hello World customizations uses a Mqtt-to-Kafka transformer which forwards MQTT PUBLISHES to a Kafka cluster.
 It maps the MQTT topic structure to a matching Kafka topic structure and preserves MQTT 4 user properties as Kafka record headers.
 
-We strongly recommend reading the {hivemq-extension-docs-link}[HiveMQ Extension Documentation]
+We strongly recommend reading the {hivemq-kafka-docs-link}[HiveMQ Enterprise Extension for Kafka Documentation]
 to grasp the core concepts of HiveMQ Kafka customization development.
 
 === Installation
@@ -39,7 +40,7 @@ Monitor your Kafka cluster for a record from topic _transform.customization_.
 
 Awesome, you got your first HiveMQ Kafka customization working.
 
-Now read the {hivemq-extension-docs-link}[HiveMQ Kafka Extension Customization Documentation] to see what customizations can do.
+Now read the {hivemq-kafka-customization-docs-link}[HiveMQ Kafka Extension Customization Documentation] to see what customizations can do.
 
 === Need help?
 
