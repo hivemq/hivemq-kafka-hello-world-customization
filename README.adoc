@@ -45,7 +45,7 @@ Now read the {hivemq-kafka-customization-docs-link}[HiveMQ Kafka Extension Custo
 == Need help?
 
 If you encounter any problems, we are happy to help.
-The best place to get in contact is our {hivemq-support}[cmmunity forum].
+The best place to get in contact is our {hivemq-support}[community forum].
 
 == License
 
