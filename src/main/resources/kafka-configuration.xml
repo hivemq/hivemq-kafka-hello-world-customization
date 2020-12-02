@@ -20,4 +20,14 @@
         </mqtt-to-kafka-transformer>
     </mqtt-to-kafka-transformers>
 
+    <kafka-to-mqtt-transformers>
+        <kafka-to-mqtt-transformer>
+            <id>hello-world-kafka-to-mqtt-transformer</id>
+            <cluster-id>cluster01</cluster-id>
+            <kafka-topics>
+                <kafka-topic>transform</kafka-topic>
+            </kafka-topics>
+            <transformer>com.hivemq.extensions.kafka.customizations.helloworld.KafkaToMqttHelloWorldTransformer</transformer>
+        </kafka-to-mqtt-transformer>
+    </kafka-to-mqtt-transformers>
 </kafka-configuration>
