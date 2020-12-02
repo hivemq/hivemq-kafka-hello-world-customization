@@ -38,13 +38,13 @@ public class KafkaToMqttHelloWorldTransformer implements KafkaToMqttTransformer 
 
     private static final @NotNull Logger log = LoggerFactory.getLogger(KafkaToMqttHelloWorldTransformer.class);
 
-    public final static String MISSING_VALUE_COUNTER_NAME = "com.hivemq.hello-world-example.missing-value.count";
+    public static final @NotNull String MISSING_VALUE_COUNTER_NAME = "com.hivemq.hello-world-example.missing-value.count";
 
     private @Nullable MetricRegistry metricRegistry;
     private @Nullable Counter missingValueCounter;
 
     @Override
-    public void init(@NotNull final KafkaToMqttInitInput input) {
+    public void init(final @NotNull KafkaToMqttInitInput input) {
         this.metricRegistry = input.getMetricRegistry();
         // build any custom metric based on your business logic and needs
         this.missingValueCounter = metricRegistry.counter(MISSING_VALUE_COUNTER_NAME);
@@ -52,8 +52,8 @@ public class KafkaToMqttHelloWorldTransformer implements KafkaToMqttTransformer 
 
 
     @Override
-    public void transformKafkaToMqtt(@NotNull final KafkaToMqttInput kafkaToMqttInput,
-                                     @NotNull final KafkaToMqttOutput kafkaToMqttOutput) {
+    public void transformKafkaToMqtt(final @NotNull KafkaToMqttInput kafkaToMqttInput,
+                                     final @NotNull KafkaToMqttOutput kafkaToMqttOutput) {
         // get the Kafka record from the input
         final KafkaRecord kafkaRecord = kafkaToMqttInput.getKafkaRecord();
 
