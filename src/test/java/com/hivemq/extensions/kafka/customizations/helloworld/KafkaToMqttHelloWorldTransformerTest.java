@@ -41,6 +41,8 @@ class KafkaToMqttHelloWorldTransformerTest {
     // test object
     private KafkaToMqttHelloWorldTransformer transformer;
 
+    private MetricRegistry metricRegistry;
+
     @BeforeEach
     void setUp() {
         input = mock(KafkaToMqttInput.class);
@@ -51,6 +53,7 @@ class KafkaToMqttHelloWorldTransformerTest {
         publish = mock(Publish.class);
         kafkaHeaders = mock(KafkaHeaders.class);
         kafkaHeader = mock(KafkaHeader.class);
+        metricRegistry = new MetricRegistry();
 
         when(input.getKafkaRecord()).thenReturn(kafkaRecord);
         when(output.newPublishBuilder()).thenReturn(publishBuilder);
@@ -72,7 +75,7 @@ class KafkaToMqttHelloWorldTransformerTest {
         when(publishBuilder.payloadFormatIndicator(any())).thenReturn(publishBuilder);
         when(publishBuilder.userProperty(anyString(), anyString())).thenReturn(publishBuilder);
 
-        when(initInput.getMetricRegistry()).thenReturn(new MetricRegistry());
+        when(initInput.getMetricRegistry()).thenReturn(metricRegistry);
         transformer.init(initInput);
     }
 
@@ -85,5 +88,12 @@ class KafkaToMqttHelloWorldTransformerTest {
         final String value = kafkaHeader.getValueAsString();
         verify(publishBuilder).userProperty(eq(kafkaHeader.getKey()), eq(value));
         verify(output).setPublishes(eq(List.of(publish)));
+    }
+
+    @Test
+    void transformMqttToKafka_missingValueIncCounter() {
+        when(kafkaRecord.getValue()).thenReturn(Optional.empty());
+        transformer.transformKafkaToMqtt(input, output);
+        assertEquals(1, metricRegistry.counter(KafkaToMqttHelloWorldTransformer.MISSING_VALUE_COUNTER_NAME).getCount());
     }
 }
