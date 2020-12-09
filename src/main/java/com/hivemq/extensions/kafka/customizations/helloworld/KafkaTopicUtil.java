@@ -35,7 +35,7 @@ public class KafkaTopicUtil {
      *
      * @param mqttTopic a single or multilevel MQTT topic
      * @return a single or multilevel Kafka topic
-     * @see <a href=" https://stackoverflow.com/questions/37062904/what-are-apache-kafka-topic-name-limitations">What
+     * @see <a href="https://stackoverflow.com/questions/37062904/what-are-apache-kafka-topic-name-limitations">What
      *         are Apache Kafka topic name limitations?</a>
      */
     public static @NotNull String mqttToKafkaTopic(final @NotNull String mqttTopic) {
