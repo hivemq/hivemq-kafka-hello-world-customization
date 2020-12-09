@@ -97,6 +97,7 @@ tasks.withType<Jar>().configureEach {
 
 tasks.javadoc {
     title = "${metadata.readableName} ${project.version} API"
+    isFailOnError = false
 }
 
 /* ******************** checks ******************** */
