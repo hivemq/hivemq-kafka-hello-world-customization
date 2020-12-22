@@ -36,7 +36,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
-class HelloWorldTransformerTest {
+class MqttToKafkaHelloWorldTransformerTest {
 
     // mock objects
     private MqttToKafkaInput input;
@@ -48,7 +48,7 @@ class HelloWorldTransformerTest {
     private UserProperty userProperty;
 
     // test object
-    private HelloWorldTransformer transformer;
+    private MqttToKafkaHelloWorldTransformer transformer;
 
     @BeforeEach
     void setUp() {
@@ -84,7 +84,7 @@ class HelloWorldTransformerTest {
         when(userProperty.getValue()).thenReturn("test-value");
         when(publishPacket.getUserProperties()).thenReturn(userProperties);
 
-        transformer = new HelloWorldTransformer();
+        transformer = new MqttToKafkaHelloWorldTransformer();
     }
 
     @SuppressWarnings("OptionalGetWithoutIsPresent")
