@@ -51,9 +51,9 @@ import java.util.List;
  *
  * @author Georg Held
  */
-public class HelloWorldTransformer implements MqttToKafkaTransformer {
+public class MqttToKafkaHelloWorldTransformer implements MqttToKafkaTransformer {
 
-    private static final @NotNull Logger log = LoggerFactory.getLogger(HelloWorldTransformer.class);
+    private static final @NotNull Logger log = LoggerFactory.getLogger(MqttToKafkaHelloWorldTransformer.class);
 
     @Override
     public void init(final @NotNull MqttToKafkaInitInput input) {
