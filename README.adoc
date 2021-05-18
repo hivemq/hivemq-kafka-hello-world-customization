@@ -14,7 +14,7 @@
 
 == Purpose
 
-This Hello World customizations uses a Mqtt-to-Kafka transformer which forwards MQTT PUBLISHES to a Kafka cluster.
+This Hello World customization uses a Mqtt-to-Kafka transformer which forwards MQTT PUBLISHES to a Kafka cluster.
 It maps the MQTT topic structure to a matching Kafka topic structure and preserves MQTT 4 user properties as Kafka record headers.
 
 We strongly recommend reading the {hivemq-kafka-docs}[HiveMQ Enterprise Extension for Kafka Documentation]
@@ -50,5 +50,5 @@ The best place to get in contact is our {hivemq-support}[community forum].
 
 == License
 
-HiveMQ Hello World Extension is licensed under the `APACHE LICENSE, VERSION 2.0`.
+HiveMQ Kafka Extension Hello World Customization is licensed under the `APACHE LICENSE, VERSION 2.0`.
 A copy of the license can be found link:LICENSE[here].
