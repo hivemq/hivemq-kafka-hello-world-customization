@@ -33,7 +33,7 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<Jar> {
+tasks.withType<Jar>().configureEach {
     manifest.attributes(
             "Implementation-Title" to project.name,
             "Implementation-Vendor" to "HiveMQ GmbH",
