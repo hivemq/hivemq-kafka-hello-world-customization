@@ -29,7 +29,7 @@ dependencies {
     testRuntimeOnly("org.slf4j:slf4j-simple:${property("slf4j-simple.version")}")
 }
 
-tasks.test {
+tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
 
