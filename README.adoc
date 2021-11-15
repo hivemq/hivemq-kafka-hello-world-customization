@@ -6,11 +6,9 @@
 
 = HiveMQ Kafka Extension Hello World Customization
 
-*Customization Type*: Demonstration
-
-*Version*: 4.7.2
-
-*License*: Apache License 2.0
+image:https://img.shields.io/badge/Customization_Type-Demonstration-orange?style=for-the-badge[Extension Type]
+image:https://img.shields.io/github/v/release/hivemq/hivemq-kafka-hello-world-customization?style=for-the-badge[GitHub release (latest by date),link=https://github.com/hivemq/hivemq-kafka-hello-world-customization/releases/latest]
+image:https://img.shields.io/github/license/hivemq/hivemq-kafka-hello-world-customization?style=for-the-badge&color=brightgreen[GitHub,link=LICENSE]
 
 == Purpose
 
