@@ -35,9 +35,10 @@ tasks.withType<Test>().configureEach {
 
 tasks.withType<Jar>().configureEach {
     manifest.attributes(
-            "Implementation-Title" to project.name,
-            "Implementation-Vendor" to "HiveMQ GmbH",
-            "Implementation-Version" to project.version)
+        "Implementation-Title" to project.name,
+        "Implementation-Vendor" to "HiveMQ GmbH",
+        "Implementation-Version" to project.version,
+    )
 }
 
 license {
