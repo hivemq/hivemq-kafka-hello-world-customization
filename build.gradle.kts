@@ -1,7 +1,7 @@
 plugins {
     java
-    id("io.github.sgtsilvio.gradle.defaults")
-    id("com.github.hierynomus.license")
+    alias(libs.plugins.defaults)
+    alias(libs.plugins.license)
 }
 
 group = "com.hivemq.extensions.kafka.customizations"
@@ -18,15 +18,13 @@ repositories {
 }
 
 dependencies {
-    implementation("com.hivemq:hivemq-kafka-extension-customization-sdk:${property("hivemq-kafka-sdk.version")}")
+    implementation(libs.hivemq.kafkaExtension.customizationSdk)
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${property("junit-jupiter.version")}")
-    testImplementation("org.junit.jupiter:junit-jupiter-params")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-    testImplementation("org.mockito:mockito-core:${property("mockito.version")}")
-    testRuntimeOnly("org.slf4j:slf4j-simple:${property("slf4j-simple.version")}")
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.mockito)
+    testRuntimeOnly(libs.slf4j.simple)
 }
 
 tasks.withType<Test>().configureEach {

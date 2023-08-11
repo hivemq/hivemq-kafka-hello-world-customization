@@ -1,0 +1,15 @@
+[versions]
+hivemq-platform = "4.18.0"
+junit-jupiter = "5.8.1"
+mockito = "4.0.0"
+slf4j = "1.7.32"
+
+[libraries]
+hivemq-kafkaExtension-customizationSdk = { module = "com.hivemq:hivemq-kafka-extension-customization-sdk", version.ref = "hivemq-platform" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+
+[plugins]
+defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.2.0" }
+license = { id = "com.github.hierynomus.license", version = "0.16.1" }
