@@ -1,7 +1,7 @@
 plugins {
     java
+    id("io.github.sgtsilvio.gradle.defaults")
     id("com.github.hierynomus.license")
-    id("com.github.sgtsilvio.gradle.utf8")
 }
 
 group = "com.hivemq.extensions.kafka.customizations"
