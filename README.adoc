@@ -22,7 +22,7 @@ to grasp the core concepts of HiveMQ Kafka customization development.
 
 . Clone this repository into a Java 11 gradle project.
 . Run `./gradlew jar` task from gradle to build the customization.
-. Move the file: "build/libs/hivemq-kafka-hello-world-customization-4.18.0.jar" to the directory: "HIVEMQ_HOME/extensions/hivemq-kafka-extension/customizations"
+. Move the file: "build/libs/hivemq-kafka-hello-world-customization-4.19.0.jar" to the directory: "HIVEMQ_HOME/extensions/hivemq-kafka-extension/customizations"
 . Copy the resources/kafka-configuration.xml to "HIVEMQ_HOME/extensions/hivemq-kafka-extension" and adapt it to your environment.
 . Delete the "HIVEMQ_HOME/extensions/hivemq-kafka-extension/DISABLED" file.
 . Start HiveMQ.
