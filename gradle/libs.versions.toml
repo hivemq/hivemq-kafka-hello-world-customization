@@ -6,7 +6,6 @@ slf4j = "1.7.32"
 
 [libraries]
 hivemq-kafkaExtension-customizationSdk = { module = "com.hivemq:hivemq-kafka-extension-customization-sdk", version.ref = "hivemq-platform" }
-junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
 mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 
