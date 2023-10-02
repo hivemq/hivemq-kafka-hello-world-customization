@@ -21,14 +21,17 @@ dependencies {
     implementation(libs.hivemq.kafkaExtension.customizationSdk)
 }
 
-dependencies {
-    testImplementation(libs.junit.jupiter)
-    testImplementation(libs.mockito)
-    testRuntimeOnly(libs.slf4j.simple)
-}
-
-tasks.withType<Test>().configureEach {
-    useJUnitPlatform()
+@Suppress("UnstableApiUsage")
+testing {
+    suites {
+        "test"(JvmTestSuite::class) {
+            useJUnitJupiter(libs.versions.junit.jupiter)
+            dependencies {
+                implementation(libs.mockito)
+                runtimeOnly(libs.slf4j.simple)
+            }
+        }
+    }
 }
 
 tasks.withType<Jar>().configureEach {
