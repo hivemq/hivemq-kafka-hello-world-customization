@@ -13,7 +13,7 @@ image:https://img.shields.io/github/license/hivemq/hivemq-kafka-hello-world-cust
 == Purpose
 
 This Hello World customization uses a Mqtt-to-Kafka transformer which forwards MQTT PUBLISHES to a Kafka cluster.
-It maps the MQTT topic structure to a matching Kafka topic structure and preserves MQTT 4 user properties as Kafka record headers.
+It maps the MQTT topic structure to a matching Kafka topic structure and preserves MQTT 5 user properties as Kafka record headers.
 
 We strongly recommend reading the {hivemq-kafka-docs}[HiveMQ Enterprise Extension for Kafka Documentation]
 to grasp the core concepts of HiveMQ Kafka customization development.
