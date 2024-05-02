@@ -9,7 +9,7 @@ description = "Hello World Customization for the HiveMQ Enterprise Extensions fo
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion = JavaLanguageVersion.of(11)
     }
 }
 
