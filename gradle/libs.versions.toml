@@ -1,8 +1,8 @@
 [versions]
 hivemq-platform = "4.20.0"
-junit-jupiter = "5.8.1"
-mockito = "4.0.0"
-slf4j = "1.7.32"
+junit-jupiter = "5.10.2"
+mockito = "5.11.0"
+slf4j = "2.0.13"
 
 [libraries]
 hivemq-kafkaExtension-customizationSdk = { module = "com.hivemq:hivemq-kafka-extension-customization-sdk", version.ref = "hivemq-platform" }
