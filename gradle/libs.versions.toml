@@ -1,7 +1,7 @@
 [versions]
 hivemq-platform = "4.20.0"
 junit-jupiter = "5.10.2"
-mockito = "5.18.0"
+mockito = "5.19.0"
 slf4j = "2.0.17"
 
 [libraries]
