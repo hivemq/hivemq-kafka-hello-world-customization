@@ -10,5 +10,5 @@ mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 
 [plugins]
-defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.2.0" }
+defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.3.0" }
 license = { id = "com.github.hierynomus.license", version = "0.16.1" }
