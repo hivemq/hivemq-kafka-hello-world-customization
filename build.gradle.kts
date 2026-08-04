@@ -27,11 +27,28 @@ dependencies {
     implementation(libs.hivemq.kafkaExtension.customizationSdk)
 }
 
+// see https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+val mockitoAgent = configurations.create("mockitoAgent") {
+    isCanBeConsumed = false
+    isCanBeResolved = true
+}
+dependencies {
+    mockitoAgent(libs.mockito) { isTransitive = false }
+}
+class MockitoAgentArgumentProvider(@get:Classpath val agentJar: FileCollection) : CommandLineArgumentProvider {
+    override fun asArguments(): Iterable<String> = listOf("-javaagent:${agentJar.singleFile}")
+}
+
 @Suppress("UnstableApiUsage")
 testing {
     suites {
         "test"(JvmTestSuite::class) {
             useJUnitJupiter(libs.versions.junit.jupiter)
+            targets.configureEach {
+                testTask {
+                    jvmArgumentProviders.add(MockitoAgentArgumentProvider(mockitoAgent))
+                }
+            }
             dependencies {
                 implementation(libs.mockito)
                 runtimeOnly(libs.slf4j.simple)
