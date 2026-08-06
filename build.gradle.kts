@@ -47,6 +47,7 @@ testing {
             targets.configureEach {
                 testTask {
                     jvmArgumentProviders.add(MockitoAgentArgumentProvider(mockitoAgent))
+                    jvmArgs("--enable-native-access=ALL-UNNAMED", "--sun-misc-unsafe-memory-access=allow")
                 }
             }
             dependencies {
