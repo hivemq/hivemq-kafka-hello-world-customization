@@ -11,4 +11,4 @@ slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 
 [plugins]
 defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.3.0" }
-spotless = { id = "com.diffplug.spotless", version = "8.10.0" }
+spotless = { id = "com.diffplug.spotless", version = "8.10.1" }
